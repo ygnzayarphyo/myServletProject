@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <servlet>
+        <description>This is the servlet of Login process.</description>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>mm.com.aidatech.www.LoginServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is about the Registration process.</description>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>mm.com.aidatech.www.RegisterServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>Mapping of user Profile.</description>
+        <servlet-name>profile</servlet-name>
+        <servlet-class>mm.com.aidatech.www.Profile</servlet-class>
+    </servlet>
+    <servlet>
+        <description>Loggin out process include destroy session information like user name.</description>
+        <servlet-name>logout</servlet-name>
+        <servlet-class>mm.com.aidatech.www.Logout</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the uploading of Status Servlet.</description>
+        <servlet-name>StatusUploadServlet</servlet-name>
+        <servlet-class>mm.com.aidatech.www.StatusUploadServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>The more detail view for a status. This include comment section.</description>
+        <servlet-name>detail</servlet-name>
+        <jsp-file>/detail.jsp</jsp-file>
+        </servlet>
+    <servlet>
+        <description>This servlet is about comment submition process.</description>
+        <servlet-name>CommitCommentServlet</servlet-name><servlet-class>mm.com.aidatech.www.CommitComment</servlet-class></servlet>
+    <servlet>
+        <description>The upload servlet include the user profile photo uploading process.</description>
+        <servlet-name>UploadServlet</servlet-name>
+        <servlet-class>mm.com.aidatech.www.PictureUploadServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the delete process of both status and comment section.</description>
+        <servlet-name>DeleteServlet</servlet-name>
+        <servlet-class>mm.com.aidatech.www.DeleteServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This Servlet is mainly focus on further
+analyticss processes on both status and comment sections.</description>
+        <servlet-name>ListServlet</servlet-name>
+        <servlet-class>mm.com.aidatech.www.List</servlet-class>
+    </servlet>
+    <servlet>
+        <description>To load database configuration value dynamically.</description>
+        <servlet-name>init</servlet-name>
+        <servlet-class>mm.com.aidatech.utilities.www.DatabaseLoader</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/RegisterServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>profile</servlet-name>
+        <url-pattern>/profile</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>logout</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>StatusUploadServlet</servlet-name>
+        <url-pattern>/StatusUpload</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>detail</servlet-name>
+        <url-pattern>/detail.jsp</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>detail</servlet-name>
+        <url-pattern>/detail</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CommitCommentServlet</servlet-name>
+        <url-pattern>/commit</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UploadServlet</servlet-name>
+        <url-pattern>/UploadServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteServlet</servlet-name>
+        <url-pattern>/delete</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ListServlet</servlet-name>
+        <url-pattern>/list</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>init</servlet-name>
+        <url-pattern>/init</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>init</welcome-file>
+        </welcome-file-list>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error.html</location>
+    </error-page>
+    <error-page>
+        <error-code>500</error-code>
+        <location>/error500.html</location>
+    </error-page>
+    <login-config>
+        <auth-method>BASIC</auth-method>
+        <realm-name>@dmin1234</realm-name>
+        </login-config>
+    </web-app>

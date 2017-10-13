@@ -1,0 +1,88 @@
+/* CSS Document */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+#wrap {
+    min-height: 100%;
+}
+
+#header{
+    width:100%;
+    height:20%;
+}
+
+#main {
+    overflow: visible;
+    padding-top: 5%;
+    padding-left:5%;
+    padding-right:5%;
+    padding-bottom: 5%;
+    text-align:center;
+    vertical-align:middle;
+    width: 100%;
+    height:85%;
+    /* must be same height as the footer */
+}
+
+#footer {
+    position: fixed;
+    bottom:0%;
+    /* negative value of footer height */
+    width: 100%;
+    height: 5%;
+    text-align: center;
+    background-color: #CCC;
+}
+
+
+/* Opera Fix by Maleika (Kohoutec) */
+
+body:before {
+    content: "";
+    height: 100%;
+    float: left;
+    width: 0;
+    margin-top: -32767px;
+    /* thank you Erik J - negate effect of float*/
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+    background-color:#48EA79;
+    border:thin;
+    padding: 5px;
+    width: 200px;
+    height:40px;
+}
+
+.normalButton{
+    -webkit-appearance: button;
+    cursor: pointer;
+    background-color:#FF0;
+    border:thin;
+    padding: 5px;
+    width: auto;
+}
+
+.consequenceTable{
+    width:30%;
+    height: 50%;
+    float:left;
+    text-align:left;
+    border-spacing:10px;
+    padding-right: 10px;
+    border:solid;
+    border-width:medium;    
+
+}

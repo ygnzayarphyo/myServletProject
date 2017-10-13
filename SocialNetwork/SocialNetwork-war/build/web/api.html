@@ -1,0 +1,319 @@
+<!--
+This html page is about the api usage of the system.
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  </head>
+  <body>
+   <a  href="#RegistrationAPI" data-toggle="collapse"><strong><em>Registration API</em></strong></a>
+                <blockquote id="RegistrationAPI">
+                    <p>URL: localhost:16522/SocialNetwork-war/RegisterServlet<br />
+                    Required: Content Type: application/x-www-form-urlencoded</p>
+                    <table width="1006" border="0">
+                        <tr>
+                            <td align="left" valign="middle"><em>Method</em></td>
+                            <td align="left" valign="middle"><em>Parameter</em></td>
+                            <td align="left" valign="middle"><em>Parameter Type</em></td>
+                            <td align="left" valign="middle"><em>Sample</em></td>
+                            <td align="left" valign="middle"><em>Description</em></td>
+                        </tr>
+                        <tr>
+                            <td align="left" valign="middle">POST</td>
+                            <td align="left" valign="middle">txtUserName</td>
+                            <td align="left" valign="middle">String(59)</td>
+                            <td align="left" valign="middle">&quot;Mg Mg&quot;</td>
+                            <td align="left" valign="middle">User Name</td>
+                        </tr>
+                        <tr>
+                            <td align="left" valign="middle">&nbsp;</td>
+                            <td align="left" valign="middle">txtEmail</td>
+                            <td align="left" valign="middle">String(49)</td>
+                            <td align="left" valign="middle">mgmg@gmail.com</td>
+                            <td align="left" valign="middle">Email</td>
+                        </tr>
+                        <tr>
+                            <td align="left" valign="middle">&nbsp;</td>
+                            <td align="left" valign="middle">select</td>
+                            <td align="left" valign="middle">String(3)</td>
+                            <td align="left" valign="middle">+95</td>
+                            <td align="left" valign="middle">Country code for Phone Number</td>
+                        </tr>
+                        <tr>
+                            <td align="left" valign="middle">&nbsp;</td>
+                            <td align="left" valign="middle">txtPhoneNumber</td>
+                            <td align="left" valign="middle">String(11)</td>
+                            <td align="left" valign="middle">09236457896</td>
+                            <td align="left" valign="middle">Mobile/Home phone number</td>
+                        </tr>
+                        <tr>
+                            <td align="left" valign="middle">&nbsp;</td>
+                            <td align="left" valign="middle">txtDOB</td>
+                            <td align="left" valign="middle">String(10)</td>
+                            <td align="left" valign="middle">28/12/2000</td>
+                            <td align="left" valign="middle">Date of Birth (dd/MM/YYYY)</td>
+                        </tr>
+                        <tr>
+                            <td align="left" valign="middle">&nbsp;</td>
+                            <td align="left" valign="middle">txtPassword</td>
+                            <td align="left" valign="middle">String(29)</td>
+                            <td align="left" valign="middle">password</td>
+                            <td align="left" valign="middle">User Password to login.</td>
+                        </tr>
+                        <tr>
+                            <td align="left" valign="middle">&nbsp;</td>
+                            <td align="left" valign="middle">returnType</td>
+                            <td align="left" valign="middle">String(3)</td>
+                            <td align="left" valign="middle">xml</td>
+                            <td align="left" valign="middle">Default return data type.For now, only xml.</td>
+                        </tr>
+                    </table>
+                    <p><em>result</em>: <br />
+                        status	11 means success<br/>
+                        10 means already exist user<br/>
+                    00 means System error</p>
+                </blockquote>
+
+                <br/>
+                <a  href="#LoginAPI" data-toggle="collapse"><em><strong>Login API</strong></em></a>
+                <blockquote id="LoginAPI" class="collapse">
+                    <p>URL: localhost:16522/SocialNetwork-war/LoginServlet<br />
+                    Required: Content Type: application/x-www-form-urlencoded</p>
+                    <table width="1006" height="126" border="0">
+                        <tr>
+                            <td><em>Method</em></td>
+                            <td><em>Parameter</em></td>
+                            <td><em>Parameter Type</em></td>
+                            <td><em>Sample</em></td>
+                            <td><em>Description</em></td>
+                        </tr>
+                        <tr>
+                            <td>POST</td>
+                            <td>txtEmail</td>
+                            <td>String(59)</td>
+                            <td>&quot;Mg Mg&quot;</td>
+                            <td>Email that register to system.</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>txtPassword</td>
+                            <td>String(29)</td>
+                            <td>password</td>
+                            <td>User's password.</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>returnType</td>
+                            <td>String(3)</td>
+                            <td>xml</td>
+                            <td> default return data type.For now, only xml.</td>
+                        </tr>
+                    </table>
+                    <p>
+
+
+
+                    result: 	status</p>
+                    <ol>
+                        <li> 11 means success </li>
+                        <li> 10 means User is not activate in this system. </li>
+                        <li> 01 means user not found. </li>
+                        <li> 00 means System error
+                        accountType (User is active or not). </li>
+                    </ol>
+                    <ul>
+                        <li>1 means active account and
+                        0 means de-active account</li>
+                    </ul>
+                </blockquote>
+
+                <br/>
+                <a  href="#StatusAPI" data-toggle="collapse"><strong><em>Status API</em></strong></a>
+                <blockquote id="StatusAPI" class="collapse">
+                    <p>URL: localhost:16522/SocialNetwork-war/list<br />
+                    Required: Content Type: application/x-www-form-urlencoded</p>
+                    <table width="1006" height="126" border="0">
+                        <tr>
+                            <td><em>Method</em></td>
+                            <td><em>Parameter</em></td>
+                            <td><em>Parameter Type</em></td>
+                            <td><em>Sample</em></td>
+                            <td><em>Description</em></td>
+                        </tr>
+                        <tr>
+                            <td>POST</td>
+                            <td>title</td>
+                            <td>String(34)</td>
+                            <td>&quot;Hello&quot;</td>
+                            <td>Posted Status Title</td>
+                        </tr>
+                        <tr>
+                            <td>status</td>
+                            <td>String(999)</td>
+                            <td>&quot;About&quot;</td>
+                            <td>Posted Status</td>
+                            <td>Messsage</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>date</td>
+                            <td>String(24)</td>
+                            <td>2017</td>
+                            <td>Both full date or only year or month is allowed</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>section</td>
+                            <td>String(10)</td>
+                            <td>status</td>
+                            <td>Default parameter &quot;status&quot; must be set.</td>
+                        </tr>
+
+                    </table>
+
+                    <p>
+
+                        result: 	&lt;result&gt;
+                        &lt;row&gt;
+                        &lt;number&gt;1&lt;/number&gt;
+                        &lt;title&gt;Hello&lt;/title&gt;
+                        &lt;message&gt;[something.]&lt;/message&gt;
+                        &lt;date&gt;[2014-09-18 01:11:29.41]&lt;/date&gt;
+                        &lt;/row&gt;
+                    &lt;/result&gt;</p>
+                </blockquote>
+
+                <br/>
+                <a  href="#CommentAPI" data-toggle="collapse"><strong><em>Comment API</em></strong></a>
+                <blockquote id="CommentAPI" class="collapse">
+                    <p>URL: localhost:16522/SocialNetwork-war/list<br />
+                    Required: Content Type: application/x-www-form-urlencoded</p>
+                    <table width="1005" border="0">
+                        <tr>
+                            <td><em>Method</em></td>
+                            <td><em>Parameter</em></td>
+                            <td><em>Parameter Type</em></td>
+                            <td><em>Sample</em></td>
+                            <td><em>Description</em></td>
+                        </tr>
+                        <tr>
+                            <td>POST</td>
+                            <td>comment</td>
+                            <td>String(499)</td>
+                            <td>&quot;Mg Mg&quot;</td>
+                            <td>Posted Comment Message.</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>date</td>
+                            <td>String(24)</td>
+                            <td>2014</td>
+                            <td>Both full date or only year or month is allowed</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>section</td>
+                            <td>String(10)</td>
+                            <td>comment</td>
+                            <td>Default parameter &quot;comment&quot; must be set.</td>
+                        </tr>
+                    </table>
+                    <p>result: 	</p>
+                    <p>&lt;result&gt;</p>
+                    <p>
+                    &lt;row&gt;</p>
+                    <p>
+                    &lt;number&gt;1&lt;/number&gt;</p>
+                    <p>
+                    &lt;message&gt;[something about comment.]&lt;/message&gt;		</p>
+                    <p>&lt;date&gt;[2014-09-18 01:11:29.41]&lt;/date&gt;</p>
+                    <p>
+                    &lt;/row&gt;</p>
+                    <p>
+                    &lt;/result&gt;</p>
+                </blockquote>
+                <br/>
+                <a  href="#Profile" data-toggle="collapse">       <strong><em>Active/ De-active account API</em></strong></a>
+                <blockquote id="Profile" class="collapse">
+                    <p>URL: localhost:16522/SocialNetwork-war/profile<br />
+                    Required: Content Type: application/x-www-form-urlencoded</p>
+                    <table width="1006" border="0">
+                        <tr>
+                            <td><em>Method</em></td>
+                            <td><em>Parameter</em></td>
+                            <td><em>Parameter Type</em></td>
+                            <td><em>Sample</em></td>
+                            <td><em>Description</em></td>
+                        </tr>
+                        <tr>
+                            <td>POST</td>
+                            <td>userid</td>
+                            <td>String</td>
+                            <td>7</td>
+                            <td>Register User Id.</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>accountType</td>
+                            <td>String</td>
+                            <td>1</td>
+                            <td>(1 for current active and 0 for current deactive account)</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>returnType</td>
+                            <td>String(3)</td>
+                            <td>xml</td>
+                            <td>default return data type.For now, only xml.</td>
+                        </tr>
+                    </table>
+                    <p>
+
+
+
+                    result:</p>
+                    <p> &lt;result&gt;<br />
+                        &lt;userid&gt;8&lt;/userid&gt;<br />
+                        &lt;accountType&gt;0&lt;/accountType&gt;<br />
+                        &lt;status&gt;11&lt;/status&gt; /* 	11 means success
+                        00 means System error */<br />
+                        &lt;/result&gt;
+                        <br />
+                    </p>
+                </blockquote>
+                <br/>
+                <a  href="#Composer" data-toggle="collapse"><strong><em>Status Uploading Plugin</em></strong></a>
+                <blockquote id="Composer" class="collapse">
+                    <p>URL: localhost:16522/SocialNetwork-war/composer.jsp<br />
+                    Required: Content Type: application/x-www-form-urlencoded</p>
+                    <table width="1007" border="0">
+                        <tr>
+                            <td><em>Method</em></td>
+                            <td><em>Parameter</em></td>
+                            <td><em>Parameter Type</em></td>
+                            <td><em>Sample</em></td>
+                            <td><em>Description</em></td>
+                        </tr>
+                        <tr>
+                            <td>GET/POST </td>
+                            <td>userid</td>
+                            <td>String</td>
+                            <td>7</td>
+                            <td>Register User Id.</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>type</td>
+                            <td>String</td>
+                            <td>api</td>
+                            <td>Default String &quot;api&quot; must set.</td>
+                        </tr>
+                    </table>
+                    <p>
+
+
+                result: 	jsp form template.</p></blockquote>
+  </body>
+</html>

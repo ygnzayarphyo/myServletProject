@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.7.1
+Created-By: 14.2-b01 (Sun Microsystems Inc.)
+Class-Path: jdbc.jar commons-io-2.5.jar commons-fileupload-1.3.3.jar o
+ rg-apache-commons-codec.jar commons-logging-1.1.1.jar com.jcraft.jsch
+ _0.1.31.jar 
+
